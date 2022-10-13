@@ -13,9 +13,8 @@
     ],
     "overrides": [],
     "parserOptions": {
-        "ecmaVersion": "latest",
-        "sourceType": "module",
-        "jsx": true
+        "ecmaVersion": 2020,
+        "sourceType": "module"
     },
     "plugins": [
         "react",
@@ -29,7 +28,7 @@
             "never"
         ],
         "requireReturnForObjectLiteral": [
-            "warn"
+            "off"
         ],
         "quotes": [
             "error",
