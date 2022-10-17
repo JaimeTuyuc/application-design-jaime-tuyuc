@@ -1,50 +1,41 @@
 {
-    "env": {
-        "browser": true,
-        "es2021": true,
-        "jest": true
-    },
-    "extends": [
-        "react-app",
-        "react-app/jest",
-        "plugin:react/recommended",
-        "airbnb",
-        "plugin:prettier/recommended"
-    ],
-    "overrides": [],
-    "parserOptions": {
-        "ecmaVersion": 2020,
-        "sourceType": "module"
-    },
-    "plugins": [
-        "react",
-        "prettier"
-    ],
-    "rules": {
-        "react/jsx-uses-react": "error",
-        "react/jsx-uses-vars": "error",
-        "arrow-body-style": [
-            "off",
-            "never"
-        ],
-        "requireReturnForObjectLiteral": [
-            "off"
-        ],
-        "quotes": [
-            "error",
-            "single"
-        ],
-        "react/function-component-definition": [
-            0,
-            {
-                "namedComponents": [
-                    "function-declaration",
-                    "function-expression",
-                    "arrow-function",
-                    "function-expression",
-                    "arrow-function"
-                ]
-            }
+  "env": {
+    "browser": true,
+    "es2021": true,
+    "jest": true
+  },
+  "extends": [
+    "react-app",
+    "react-app/jest",
+    "plugin:react/recommended",
+    "airbnb",
+    "plugin:prettier/recommended"
+  ],
+  "overrides": [],
+  "parserOptions": {
+    "ecmaVersion": 2020,
+    "sourceType": "module"
+  },
+  "plugins": ["react", "prettier"],
+  "rules": {
+
+    "no-console": "off",
+    "react/jsx-uses-react": "warn",
+    "react/jsx-uses-vars": "warn",
+    "arrow-body-style": ["off", "never"],
+    "requireReturnForObjectLiteral": ["off"],
+    "quotes": ["error", "single"],
+    "react/function-component-definition": [
+      0,
+      {
+        "namedComponents": [
+          "function-declaration",
+          "function-expression",
+          "arrow-function",
+          "function-expression",
+          "arrow-function"
         ]
-    }
+      }
+    ]
+  }
 }
