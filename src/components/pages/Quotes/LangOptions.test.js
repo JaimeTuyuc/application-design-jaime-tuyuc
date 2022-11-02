@@ -26,7 +26,6 @@ describe('All test for LangOptions', () => {
   const middlewares = [thunk];
   const mockedStore = configureStore(middlewares);
   let store;
-  let wrapper;
   it('shoult test all functions of LangOptions.js', () => {
     store = mockedStore(initialState);
     render(
