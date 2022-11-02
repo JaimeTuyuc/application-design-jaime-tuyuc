@@ -1,0 +1,12 @@
+{
+    "quotesPage": { "homeTitle": "Inspirational Quotes", "buttonQuotes": "See Quotes", "changeQuote": "Change", "description": "Inspirational and motivational phrases for your day to day, will help you have a better day", "selectLanguage": "Choose a languge", "backgroundImage": { "fields": { "title": "Home Image", "description": "Backrgound Image quote", "file": { "url": "//images.ctfassets.net/q82gde72vlaf/6hzrNujwVTjcN9TBv8K6GE/875cea269295aadf3f42e962e46e7f3f/backHome.jpeg", "contentType": "image/jpeg"}}} },
+    "quotes": [
+        { "fields": { "description": "Um homem sábio nunca sabe tudo, só os tolos sabem tudo.", "slug": "quote-8", "title": "Homen sabio", "image": { "fields": {"title": "Image Br", "description": "", "file": {"url": "//images.ctfassets.net/q82gde72vlaf/1z3iJJsxRIiTZn3A4Ushy6/6e52a38c74480f28e14fcf512108d1f1/wiseBr.jpeg", "contentType": "image/jgeg"}}}}},
+        { "fields": { "description": "Quando você se concentra no bem, o bem se torna melhor.", "slug": "quote-7", "title": "Tudo certo", "image": { "fields": {"title": "Image Br", "description": "", "file": {"url": "//images.ctfassets.net/q82gde72vlaf/5Ph6QKmXwRzu5IHQtGfOTP/4928a0f999ec67c774578196c829d1a4/church-1993645_1920.jpeg", "contentType": "image/jgeg"}}}}},
+        { "fields": { "description": "Não conte às pessoas seus planos. Mostre-lhes os resultados.", "slug": "quote-6", "title": "Fique quieto", "image": { "fields": {"title": "Image Br", "description": "", "file": {"url": "//images.ctfassets.net/q82gde72vlaf/3FtesrQqyu96n2l4qBuLFZ/535815b1b472e9dcdbc20df0aef30caa/lago.jpeg", "contentType": "image/jgeg"}}}}}
+    ],
+    "localesOption": [{"code": "en-US", "default": "true", "name": "English (United States)", "sys": { "id": "0JSiaVgDOEhQcd3Goj9yxD", "type": "Locale", "version": "1"}}, {"code": "pt-BR", "default": "false", "fallbackCode": "en-US", "name": "Portuguese (Brazil)", "sys": { "id": "1IC96kx5sbqbcc0RyUnoHy", "type": "Locale", "version": "1"}}],
+    "singleQuote": { "fields": { "description": "Um homem sábio nunca sabe tudo, só os tolos sabem tudo.", "slug": "quote-8", "title": "Homen sabio", "image": { "fields": {"title": "Image Br", "description": "", "file": {"url": "//images.ctfassets.net/q82gde72vlaf/1z3iJJsxRIiTZn3A4Ushy6/6e52a38c74480f28e14fcf512108d1f1/wiseBr.jpeg", "contentType": "image/jgeg"}}}}},
+    "langCode": "en-US"
+}
+

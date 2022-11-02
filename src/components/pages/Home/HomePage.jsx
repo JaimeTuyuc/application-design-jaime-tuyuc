@@ -24,19 +24,22 @@ const HomePage = () => {
   } = useSelector((state) => state.quotes);
 
   return (
-    <BackgroundHomePage>
+    <BackgroundHomePage data-testid="backgroundHomePage">
       <ContainerLanguage>
         <LangOptions options={localesOption} selectLang={selectLanguage} />
       </ContainerLanguage>
-      <MainContainer image={backgroundImage?.fields?.file?.url}>
+      <MainContainer
+        data-testid="bgImage"
+        image={backgroundImage?.fields?.file?.url}
+      >
         <ContentContainer>
-          <h1>{homeTitle}</h1>
+          <h1 data-testid="titleHome">{homeTitle}</h1>
 
-          <p>{description}</p>
+          <p data-testid="descriptionHome">{description}</p>
         </ContentContainer>
-        <ButtonQuote type="button">
+        <ButtonQuote role="button" data-testid="seeQuotes" type="button">
           <NavLink to="quotes">
-            <span>{buttonQuotes}</span>
+            <span data-testid="buttonQuotes">{buttonQuotes}</span>
           </NavLink>
         </ButtonQuote>
       </MainContainer>

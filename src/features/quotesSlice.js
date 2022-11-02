@@ -11,7 +11,7 @@ const initialState = {
 };
 
 export const quotesSlice = createSlice({
-  name: 'quotes_slise',
+  name: 'quotes_slice',
   initialState,
   reducers: {
     dispatchContentHomePage(state, action) {

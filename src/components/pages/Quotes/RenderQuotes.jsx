@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 /* eslint-disable spaced-comment */
 /* eslint-disable no-unused-vars */
 import React from 'react';
@@ -18,7 +19,6 @@ const RenderQuotes = () => {
     quotesPage: { changeQuote },
     quoteRender,
   } = useSelector((state) => state.quotes);
-
   const changeQuoteHandler = () => {
     const random = Math.floor(Math.random() * individualQuotes.length);
     dispatch(quotesAction.dispatchSingleQuote(individualQuotes[random]));
@@ -27,12 +27,20 @@ const RenderQuotes = () => {
   return (
     <RenderQuotesConatiner>
       <SubContainer image={quoteRender?.fields?.image?.fields?.file?.url}>
-        <ContentContainer>
-          <h3>{quoteRender?.fields?.title}</h3>
-          <p>{quoteRender?.fields?.description}</p>
+        <ContentContainer data-testid="mainContainer">
+          <h3 title="quotesTitle" data-testid="titleElement">
+            {quoteRender?.fields?.title}
+          </h3>
+          <p data-testid="quotesDescription">
+            {quoteRender?.fields?.description}
+          </p>
         </ContentContainer>
 
-        <ButtonChange onClick={changeQuoteHandler} type="button">
+        <ButtonChange
+          data-testid="buttonQuote"
+          onClick={changeQuoteHandler}
+          type="button"
+        >
           {changeQuote}
         </ButtonChange>
       </SubContainer>
