@@ -21,7 +21,6 @@ describe('test for quotesSlice and reducer file and functions', () => {
   it('should check the initial state', () => {
     const action = { type: 'unknown' };
     const expectedState = initialState;
-
     expect(quotesSlice.reducer(initialState, action)).toEqual(expectedState);
   });
 
