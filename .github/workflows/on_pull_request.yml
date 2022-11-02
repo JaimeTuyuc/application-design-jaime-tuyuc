@@ -1,10 +1,9 @@
 name: 'Build, Lint, Test'
 
 on: 
-  push:
-    branches:
-      - master
-
+  pull_request:
+    types: [opened, reopened, ready_for_review, synchronize]
+    
 jobs:
   build:
     name: Pull request
