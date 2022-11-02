@@ -32,11 +32,15 @@ const LangOptions = ({ options, selectLang }) => {
   };
 
   return (
-    <SelectStyle value={lang} onChange={checkValue}>
-      <option> -- {selectLang} --</option>
+    <SelectStyle
+      data-testid="selectContainer"
+      value={lang}
+      onChange={checkValue}
+    >
+      <option data-testid="emptyVal"> -- {selectLang} --</option>
       {options.map((opt) => {
         return (
-          <option key={opt.code} value={opt.name}>
+          <option data-testid="langOpt" key={opt.code} value={opt.name}>
             {opt.name}
           </option>
         );

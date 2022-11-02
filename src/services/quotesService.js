@@ -19,7 +19,7 @@ export const getAllHomeContent = createAsyncThunk(
     }
   },
 );
-// q82gde72vlaf
+
 export const getAllQuotes = createAsyncThunk(
   'get_all_quotes',
   async (language, thunkApi) => {
