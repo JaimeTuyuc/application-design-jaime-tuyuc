@@ -18,10 +18,10 @@ jobs:
 
       - name: Running tests
         run: npm run test
-        working-directory: ../src
+        working-directory: ./src
         timeout-minutes: 15
 
       - name: Running lint
         run: npm run lint
-        working-directory: ../src
+        working-directory: ./src
         timeout-minutes: 15
