@@ -14,9 +14,9 @@ import quotes from '../../utils/quotes.json';
 describe('All test for Render quotes', () => {
   const initialState = {
     quotes: {
-      quotesPage: {},
+      quotesPage: quotes.quotesPage,
       individualQuotes: quotes.quotes,
-      quoteRender: {},
+      quoteRender: quotes.singleQuote,
       localesOption: [],
       langCode: '',
     },
@@ -51,6 +51,9 @@ describe('All test for Render quotes', () => {
     expect(titleElement).toBeTruthy();
     expect(descEle).toBeTruthy();
     expect(buttonQuote).toBeTruthy();
+    expect(titleElement).toHaveTextContent(quotes.singleQuote.fields?.title);
+    expect(descEle).toHaveTextContent(quotes.singleQuote.fields?.description);
+    expect(buttonQuote).toHaveTextContent(quotes.quotesPage.changeQuote);
   });
 
   it('should test branch negative conditions', () => {
@@ -79,6 +82,35 @@ describe('All test for Render quotes', () => {
       const btnQuote = screen.getByTestId('buttonQuote');
       fireEvent.click(btnQuote);
       expect(buttonChangequote).not.toHaveBeenCalled();
+    });
+  });
+
+  describe('should test footer compoent', () => {
+    it('should find the footer container', () => {
+      render(
+        <Provider store={store}>
+          <RenderQuotes />
+        </Provider>,
+      );
+
+      const footerContainer = screen.getByTestId('footerContainer');
+      const totalAmount = screen.getByTestId('totalAmount');
+      const currentlyShowing = screen.getByTestId('currentlyShowing');
+      expect(footerContainer).toBeInTheDocument();
+      expect(totalAmount).toBeInTheDocument();
+      expect(currentlyShowing).toBeInTheDocument();
+    });
+
+    it('should shown the length of quotes', () => {
+      render(
+        <Provider store={store}>
+          <RenderQuotes />
+        </Provider>,
+      );
+
+      const spanQuotes = screen.getByTestId('elementsQuotes');
+      expect(spanQuotes).toBeInTheDocument();
+      expect(spanQuotes).toHaveTextContent(quotes.quotes.length);
     });
   });
 });
