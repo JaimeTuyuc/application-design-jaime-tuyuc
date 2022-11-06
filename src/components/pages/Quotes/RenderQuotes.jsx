@@ -1,26 +1,30 @@
 /* eslint-disable react/no-unknown-property */
 /* eslint-disable spaced-comment */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector, useDispatch } from 'react-redux';
 import {
   RenderQuotesConatiner,
   SubContainer,
   ContentContainer,
   ButtonChange,
+  FooterContainer,
+  SubContentFooter,
 } from './styles/RenderStyles';
 import { quotesAction } from '../../../features/quotesSlice';
 
 const RenderQuotes = () => {
   const dispatch = useDispatch();
+  const [actualQuote, setActualQuote] = useState(0);
   // eslint-disable-next-line no-unused-vars
   const {
     individualQuotes,
-    quotesPage: { changeQuote },
+    quotesPage: { changeQuote, totalQuotes, currentlyShowing },
     quoteRender,
   } = useSelector((state) => state.quotes);
   const changeQuoteHandler = () => {
     const random = Math.floor(Math.random() * individualQuotes.length);
+    setActualQuote(random);
     dispatch(quotesAction.dispatchSingleQuote(individualQuotes[random]));
   };
 
@@ -44,6 +48,18 @@ const RenderQuotes = () => {
           {changeQuote}
         </ButtonChange>
       </SubContainer>
+
+      <FooterContainer>
+        <SubContentFooter data-testid="footerContainer">
+          <p data-testid="totalAmount">
+            {totalQuotes}{' '}
+            <span data-testid="elementsQuotes">{individualQuotes.length}</span>
+          </p>
+          <p data-testid="currentlyShowing">
+            {currentlyShowing} <span>{actualQuote + 1}</span>
+          </p>
+        </SubContentFooter>
+      </FooterContainer>
     </RenderQuotesConatiner>
   );
 };

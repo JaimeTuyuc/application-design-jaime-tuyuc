@@ -8,6 +8,7 @@ export const RenderQuotesConatiner = styled.div`
   align-items: center;
   justify-content: center;
   background-size: 300% 300%;
+  position: relative;
   background-image: linear-gradient(
     -45deg,
     rgba(59, 173, 227, 1) 0%,
@@ -153,5 +154,57 @@ export const ButtonChange = styled.button`
     100% {
       background-position: 0 0;
     }
+  }
+`;
+
+export const FooterContainer = styled.div`
+  background-color: #ff7300;
+  opacity: 0.8;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 7%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  @media (max-width: 900px) {
+    height: 9%;
+  }
+  @media (max-width: 500px) {
+    height: 13%;
+  }
+`;
+
+export const SubContentFooter = styled.div`
+  width: 50%;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 0.5rem;
+  flex-direction: row;
+  p {
+    font-family: Roboto;
+    color: rgba(99, 31, 102, 8);
+    font-weight: 700;
+    align-items: center;
+    font-size: 20px;
+    text-align: center;
+    span {
+      font-style: italic;
+      color: #f2f3f5;
+      font-weight: bolder;
+      font-size: 20px;
+    }
+  }
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+
+    p {
+      padding: 0.2rem 0;
+    }
+  }
+  @media (max-width: 500px) {
+    width: 100%;
+    background-color: red;
   }
 `;
